@@ -111,7 +111,7 @@ body{font-family:var(--font);background:var(--white);color:var(--g800);-webkit-f
 ::selection{background:var(--accent);color:#fff}
 a{text-decoration:none;color:inherit}
 img{max-width:100%;display:block}
-.page{display:none}.page.active{display:block}
+.page{display:block}.spa-ready .page{display:none}.spa-ready .page.active{display:block}
 .nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid var(--g200);transition:box-shadow .3s}
 .nav.scrolled{box-shadow:0 2px 20px rgba(0,0,0,.08)}
 .nav-inner{max-width:var(--max);margin:0 auto;padding:0 32px;height:80px;display:flex;align-items:center;justify-content:space-between}
@@ -327,8 +327,9 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 .footer-nav a{display:block;font-size:13px;color:rgba(255,255,255,.5);margin-bottom:10px;transition:color .2s;cursor:pointer}.footer-nav a:hover{color:#fff}
 .footer-bottom{max-width:var(--max);margin:0 auto;padding-top:24px;text-align:center;font-size:11px;color:rgba(255,255,255,.25);letter-spacing:1px}
 /* PAGE TRANSITION */
-.page{display:none;transition:opacity .3s ease,transform .3s ease}
-.page.active{display:block}
+.page{display:block;transition:opacity .3s ease,transform .3s ease}
+.spa-ready .page{display:none;transition:opacity .3s ease,transform .3s ease}
+.spa-ready .page.active{display:block}
 /* BREADCRUMB */
 .breadcrumb{padding:8px 0;font-size:12px;color:rgba(255,255,255,.5)}
 .breadcrumb a{color:rgba(255,255,255,.7);cursor:pointer}.breadcrumb a:hover{text-decoration:underline;color:#fff}
@@ -475,20 +476,20 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <nav class="nav" id="nav"><div class="nav-inner">
 <div class="logo" onclick="goPage('top')"><div class="logo-icon">左</div><div><div class="logo-text">社長の左腕</div><div class="logo-sub">M&A Advisory Partner</div></div></div>
 <div class="nav-links">
-<a onclick="goPage('top')" data-page="top">トップ</a>
-<a onclick="goPage('service')" data-page="service">サービス</a>
-<a onclick="goPage('rep')" data-page="rep">代表紹介</a>
-<a onclick="goPage('company')" data-page="company">会社概要</a>
-<a class="nav-cta" onclick="openModal()">無料相談</a>
+<a href="#page-top" onclick="goPage('top');return false" data-page="top">トップ</a>
+<a href="#page-service" onclick="goPage('service');return false" data-page="service">サービス</a>
+<a href="#page-rep" onclick="goPage('rep');return false" data-page="rep">代表紹介</a>
+<a href="#page-company" onclick="goPage('company');return false" data-page="company">会社概要</a>
+<a class="nav-cta" href="#contact" onclick="openModal();return false">無料相談</a>
 </div>
 <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav>
 <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="モバイルナビゲーション">
-<a onclick="goPage('top');closeMobileMenu()">トップ</a>
-<a onclick="goPage('service');closeMobileMenu()">サービス</a>
-<a onclick="goPage('rep');closeMobileMenu()">代表紹介</a>
-<a onclick="goPage('company');closeMobileMenu()">会社概要</a>
-<a onclick="openModal();closeMobileMenu()">無料相談</a>
+<a href="#page-top" onclick="goPage('top');closeMobileMenu();return false">トップ</a>
+<a href="#page-service" onclick="goPage('service');closeMobileMenu();return false">サービス</a>
+<a href="#page-rep" onclick="goPage('rep');closeMobileMenu();return false">代表紹介</a>
+<a href="#page-company" onclick="goPage('company');closeMobileMenu();return false">会社概要</a>
+<a href="#contact" onclick="openModal();closeMobileMenu();return false">無料相談</a>
 </div>
 
 <!-- ═══ TOP ═══ -->
@@ -601,7 +602,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <!-- ═══ SERVICE ═══ -->
 <div class="page" id="page-service">
 <div class="page-header"><div class="container"><span class="section-tag">SERVICE</span><h1>サービス紹介</h1><p>仲介でもコンサルでもない、新しいM&Aパートナーの形</p></div></div>
-<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a onclick="goPage('top')">トップ</a><span>›</span>サービス紹介</div></div></div>
+<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="#page-top" onclick="goPage('top');return false">トップ</a><span>›</span>サービス紹介</div></div></div>
 
 <!-- Service Overview Banner -->
 <div style="background:var(--off);padding:36px 0;border-bottom:1px solid var(--g200)">
@@ -717,7 +718,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <!-- ═══ REPRESENTATIVE ═══ -->
 <div class="page" id="page-rep">
 <div class="page-header"><div class="container"><span class="section-tag">REPRESENTATIVE</span><h1>代表紹介</h1></div></div>
-<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a onclick="goPage('top')">トップ</a><span>›</span>代表紹介</div></div></div>
+<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="#page-top" onclick="goPage('top');return false">トップ</a><span>›</span>代表紹介</div></div></div>
 <section class="section" style="background:var(--white)"><div class="container">
 <div class="rep-grid">
 <div class="reveal" style="transition-delay:.15s">
@@ -754,7 +755,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <!-- ═══ COMPANY ═══ -->
 <div class="page" id="page-company">
 <div class="page-header"><div class="container"><span class="section-tag">COMPANY</span><h1>会社概要</h1></div></div>
-<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a onclick="goPage('top')">トップ</a><span>›</span>会社概要</div></div></div>
+<div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="#page-top" onclick="goPage('top');return false">トップ</a><span>›</span>会社概要</div></div></div>
 <section class="section" style="background:var(--white)"><div class="container">
 <div class="reveal">
 <table class="company-table">
@@ -841,7 +842,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <footer>
 <div class="footer-inner">
 <div class="footer-logo"><div class="logo"><div class="logo-icon">左</div><div><div class="logo-text">社長の左腕</div></div></div><p>仲介でもコンサルでもない、経営者専属のM&Aパートナー。</p></div>
-<div class="footer-nav"><h4>Menu</h4><a onclick="goPage('top')">トップ</a><a onclick="goPage('service')">サービス紹介</a><a onclick="goPage('rep')">代表紹介</a><a onclick="goPage('company')">会社概要</a></div>
+<div class="footer-nav"><h4>Menu</h4><a href="#page-top" onclick="goPage('top');return false">トップ</a><a href="#page-service" onclick="goPage('service');return false">サービス紹介</a><a href="#page-rep" onclick="goPage('rep');return false">代表紹介</a><a href="#page-company" onclick="goPage('company');return false">会社概要</a></div>
 <div class="footer-nav"><h4>Contact</h4><a href="mailto:k.takada@tkdconsul.com">k.takada@tkdconsul.com</a></div>
 </div>
 <div class="footer-bottom">© 2026 社長の左腕 All Rights Reserved.</div>
@@ -932,6 +933,8 @@ const cObs=new IntersectionObserver(entries=>{entries.forEach(e=>{if(e.isInterse
 document.querySelectorAll('[data-count]').forEach(el=>cObs.observe(el));
 function toggleFaq(el){el.closest('.faq-item').classList.toggle('open')}
 // Exit Intent Popup
+// Enable SPA mode (crawlers see all content, users get SPA behavior)
+document.documentElement.classList.add('spa-ready');
 // Hide loader
 window.addEventListener('load',()=>{const l=document.getElementById('pageLoader');if(l){l.style.opacity='0';setTimeout(()=>l.remove(),400)}});
 // NOTE RSS Integration
