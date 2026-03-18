@@ -192,7 +192,7 @@ img{max-width:100%;display:block}
 .cta-band p{font-size:15px;color:rgba(255,255,255,.55);margin-bottom:36px;line-height:1.8}
 .cta-band .btn-red{font-size:16px;padding:20px 52px}
 .page-header{background:linear-gradient(135deg,#0f1d4a,#1e40af);padding:120px 0 80px;text-align:center;margin-top:-1px}
-.page-header .section-tag{color:rgba(255,255,255,.5)}.page-header h1{font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;line-height:1.4}.page-header p{font-size:16px;color:rgba(255,255,255,.5);margin-top:16px}
+.page-header .section-tag{color:rgba(255,255,255,.5)}.page-header h1,.page-header .page-heading{font-size:clamp(28px,4vw,42px);font-weight:900;color:#fff;line-height:1.4}.page-header p{font-size:16px;color:rgba(255,255,255,.5);margin-top:16px}
 .matrix{width:100%;border-collapse:collapse;margin-top:32px;margin-bottom:40px;border-radius:6px;overflow:hidden;border:1px solid var(--g200)}
 .matrix th,.matrix td{padding:10px 8px;text-align:center;font-size:12px;border-bottom:1px solid var(--g100);vertical-align:middle}
 .matrix thead th{background:var(--g50);color:var(--g600);font-weight:700;font-size:10px;letter-spacing:1px;padding:12px 8px}
@@ -531,7 +531,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <section class="section" style="background:var(--white)"><div class="container">
 <div class="reveal"><span class="section-tag">ABOUT US</span><h2 class="section-title">「社長の左腕」とは</h2></div>
 <div class="about-grid" style="display:flex;flex-direction:column;gap:40px">
-<div class="about-img reveal" style="max-width:100%;margin:0 auto;background:none;border:none"><img src="representative.webp" alt="社長（右腕：実行力）とパートナー（左腕：判断・支え）— あなた専属の経営パートナー" style="width:100%;height:auto;border-radius:8px;display:block" loading="lazy"></div>
+<div class="about-img reveal" style="max-width:100%;margin:0 auto;background:none;border:none"><img src="representative.webp" srcset="representative-480w.webp 480w, representative-768w.webp 768w, representative.webp 1024w" sizes="(max-width:600px) 480px, (max-width:900px) 768px, 1024px" alt="社長（右腕：実行力）とパートナー（左腕：判断・支え）— あなた専属の経営パートナー" width="1024" height="572" style="width:100%;height:auto;border-radius:8px;display:block" loading="lazy"></div>
 <div class="about-content reveal" style="transition-delay:.15s">
 <h3>仲介でもコンサルでもない、あなただけの「経営パートナー」。</h3>
 <p>M&A仲介会社は売り手・買い手の双方から報酬を受け取る構造上、どちらか一方の味方にはなれません。</p>
@@ -601,7 +601,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 
 <!-- ═══ SERVICE ═══ -->
 <div class="page" id="page-service">
-<div class="page-header"><div class="container"><span class="section-tag">SERVICE</span><h1>サービス紹介</h1><p>仲介でもコンサルでもない、新しいM&Aパートナーの形</p></div></div>
+<div class="page-header"><div class="container"><span class="section-tag">SERVICE</span><h2 class="page-heading">サービス紹介</h2><p>仲介でもコンサルでもない、新しいM&Aパートナーの形</p></div></div>
 <div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="/" onclick="goPage('top');return false">トップ</a><span>›</span>サービス紹介</div></div></div>
 
 <!-- Service Overview Banner -->
@@ -717,7 +717,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 
 <!-- ═══ REPRESENTATIVE ═══ -->
 <div class="page" id="page-rep">
-<div class="page-header"><div class="container"><span class="section-tag">REPRESENTATIVE</span><h1>代表紹介</h1></div></div>
+<div class="page-header"><div class="container"><span class="section-tag">REPRESENTATIVE</span><h2 class="page-heading">代表紹介</h2></div></div>
 <div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="/" onclick="goPage('top');return false">トップ</a><span>›</span>代表紹介</div></div></div>
 <section class="section" style="background:var(--white)"><div class="container">
 <div class="rep-grid">
@@ -754,7 +754,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 
 <!-- ═══ COMPANY ═══ -->
 <div class="page" id="page-company">
-<div class="page-header"><div class="container"><span class="section-tag">COMPANY</span><h1>会社概要</h1></div></div>
+<div class="page-header"><div class="container"><span class="section-tag">COMPANY</span><h2 class="page-heading">会社概要</h2></div></div>
 <div style="background:linear-gradient(135deg,#0f1d4a,#1e40af)"><div class="container"><div class="breadcrumb"><a href="/" onclick="goPage('top');return false">トップ</a><span>›</span>会社概要</div></div></div>
 <section class="section" style="background:var(--white)"><div class="container">
 <div class="reveal">
@@ -965,7 +965,7 @@ window.addEventListener('load',()=>{const l=document.getElementById('pageLoader'
         var date=new Date(item.pubDate);
         var dateStr=date.getFullYear()+'.'+('0'+(date.getMonth()+1)).slice(-2)+'.'+('0'+date.getDate()).slice(-2);
         var thumb=item.thumbnail||item.enclosure&&item.enclosure.link||'';
-        var thumbHtml=thumb?'<img class="note-thumb" src="'+thumb+'" alt="" loading="lazy">':'<div class="note-thumb" style="background:var(--off2)"></div>';
+        var thumbHtml=thumb?'<img class="note-thumb" src="'+thumb+'" alt="'+item.title+'" loading="lazy">':'<div class="note-thumb" style="background:var(--off2)"></div>';
         html+='<a class="note-card reveal" href="'+item.link+'" target="_blank" rel="noopener noreferrer">'+thumbHtml+'<div class="note-body"><h4>'+item.title+'</h4><div class="note-date">'+dateStr+'</div></div></a>';
       });
       container.innerHTML=html;
