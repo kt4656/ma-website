@@ -473,6 +473,19 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 .note-more{display:block;margin:32px auto 0;padding:14px 40px;background:transparent;border:2px solid var(--navy);color:var(--navy);font-weight:700;font-size:14px;border-radius:6px;cursor:pointer;transition:all .3s;font-family:var(--font);text-decoration:none;text-align:center;width:fit-content}
 .note-more:hover{background:var(--navy);color:#fff}
 @media(max-width:600px){.note-grid{grid-template-columns:1fr}}
+/* SNS Share */
+.share-bar{position:fixed;right:20px;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;z-index:90}
+.share-btn{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-size:16px;text-decoration:none;transition:all .3s;box-shadow:0 2px 8px rgba(0,0,0,.15)}
+.share-btn:hover{transform:scale(1.1);box-shadow:0 4px 16px rgba(0,0,0,.2)}
+.share-btn.x-share{background:#000}
+.share-btn.fb-share{background:#1877f2}
+.share-btn.line-share{background:#06c755}
+.share-btn.copy-share{background:var(--navy);cursor:pointer;border:none}
+.share-copied{position:absolute;right:52px;top:50%;transform:translateY(-50%);background:var(--navy);color:#fff;font-size:11px;padding:4px 10px;border-radius:4px;white-space:nowrap;opacity:0;transition:opacity .3s}
+.share-copied.show{opacity:1}
+@media(max-width:768px){
+  .share-bar{position:static;transform:none;flex-direction:row;justify-content:center;padding:24px 0;gap:12px}
+}
 </style>
 <body>
 <!-- LOADING -->
