@@ -8,21 +8,21 @@
 <meta name="keywords" content="M&A 相談,事業承継 相談,会社売却 相談,M&A セカンドオピニオン,M&A仲介 手数料,M&A仲介 評判,M&A 顧問,事業承継 費用,会社売却 費用,後継者問題,M&A アドバイザー,企業価値算定,DD デューデリジェンス,中小企業 M&A,事業承継 パートナー,M&A 料金 比較,社長の左腕">
 <meta name="author" content="社長の左腕">
 <meta name="robots" content="index, follow">
-<link rel="canonical" href="https://monumental-truffle-f906df.netlify.app/">
+<link rel="canonical" href="https://shacho-hidariude.com/">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231e40af'/><text x='16' y='23' text-anchor='middle' font-size='20' font-weight='900' fill='white' font-family='sans-serif'>左</text></svg>">
 <!-- OGP -->
 <meta property="og:title" content="社長の左腕 | 元大手M&A仲介副部長があなた専属の経営顧問に">
 <meta property="og:description" content="M&A仲介に不安を感じていませんか？売り手100%専属の顧問として月20万で伴走。セカンドオピニオン・企業価値算定・DD対策まで。初回30分無料。">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://monumental-truffle-f906df.netlify.app/">
-<meta property="og:image" content="https://monumental-truffle-f906df.netlify.app/ogp.png">
+<meta property="og:url" content="https://shacho-hidariude.com/">
+<meta property="og:image" content="https://shacho-hidariude.com/ogp.png">
 <meta property="og:site_name" content="社長の左腕">
 <meta property="og:locale" content="ja_JP">
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="社長の左腕 | 元大手M&A仲介副部長があなた専属の経営顧問に">
 <meta name="twitter:description" content="M&A仲介に不安を感じていませんか？売り手100%専属の顧問として月20万で伴走。セカンドオピニオン対応。">
-<meta name="twitter:image" content="https://monumental-truffle-f906df.netlify.app/ogp.png">
+<meta name="twitter:image" content="https://shacho-hidariude.com/ogp.png">
 <!-- Fonts: preconnect + display=swap for speed -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -51,7 +51,7 @@
   "@type": "ProfessionalService",
   "name": "社長の左腕",
   "description": "事業承継・M&A経営者専属パートナー。仲介でもコンサルでもない、月20万の経営顧問として最善の選択を一緒に考えます。",
-  "url": "https://monumental-truffle-f906df.netlify.app/",
+  "url": "https://shacho-hidariude.com/",
   "telephone": "",
   "email": "k.takada@tkdconsul.com",
   "priceRange": "¥¥",
@@ -77,17 +77,19 @@
   }
 }
 </script>
-<!-- BreadcrumbList Structured Data -->
+<!-- WebSite Structured Data -->
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {"@type": "ListItem", "position": 1, "name": "トップ", "item": "https://monumental-truffle-f906df.netlify.app/"},
-    {"@type": "ListItem", "position": 2, "name": "サービス紹介", "item": "https://monumental-truffle-f906df.netlify.app/service"},
-    {"@type": "ListItem", "position": 3, "name": "代表紹介", "item": "https://monumental-truffle-f906df.netlify.app/representative"},
-    {"@type": "ListItem", "position": 4, "name": "会社概要", "item": "https://monumental-truffle-f906df.netlify.app/company"}
-  ]
+  "@type": "WebSite",
+  "name": "社長の左腕",
+  "url": "https://shacho-hidariude.com/",
+  "description": "事業承継・M&A経営者専属パートナー。仲介でもコンサルでもない、月20万の経営顧問。",
+  "publisher": {
+    "@type": "Organization",
+    "name": "社長の左腕",
+    "url": "https://shacho-hidariude.com/"
+  }
 }
 </script>
 <style>
@@ -463,9 +465,9 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <a onclick="goPage('company')" data-page="company">会社概要</a>
 <a class="nav-cta" onclick="openModal()">無料相談</a>
 </div>
-<button class="nav-hamburger" onclick="toggleMobileMenu()"><span></span><span></span><span></span></button>
+<button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
 </div></nav>
-<div class="mobile-menu" id="mobileMenu">
+<div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="モバイルナビゲーション">
 <a onclick="goPage('top');closeMobileMenu()">トップ</a>
 <a onclick="goPage('service');closeMobileMenu()">サービス</a>
 <a onclick="goPage('rep');closeMobileMenu()">代表紹介</a>
@@ -823,7 +825,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 </footer>
 
 <script>
-function toggleMobileMenu(){document.getElementById('mobileMenu').classList.toggle('open')}
+function toggleMobileMenu(){var m=document.getElementById('mobileMenu');m.classList.toggle('open');var b=document.querySelector('.nav-hamburger');b.setAttribute('aria-expanded',m.classList.contains('open'))}
 function closeMobileMenu(){document.getElementById('mobileMenu').classList.remove('open')}
 function goPage(page){
   closeMobileMenu();

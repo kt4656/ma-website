@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://monumental-truffle-f906df.netlify.app/sitemap.xml
+Sitemap: https://shacho-hidariude.com/sitemap.xml
