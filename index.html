@@ -125,7 +125,7 @@ img{max-width:100%;display:block}
 .nav-cta{background:var(--accent)!important;color:#fff!important;padding:12px 28px!important;border-radius:2px;border-bottom:none!important;font-weight:700!important;transition:background .3s!important}
 .nav-cta:hover{background:var(--accent-dk)!important}
 .nav-hamburger{display:none;background:none;border:none;cursor:pointer;padding:8px}
-.nav-hamburger span{display:block;width:24px;height:2px;background:var(--navy);margin:5px 0;transition:all .3s}
+.nav-hamburger span{display:block;width:24px;height:3px;background:var(--navy);margin:5px 0;transition:all .3s}
 .mobile-menu{display:none;position:fixed;top:80px;left:0;right:0;background:var(--white);border-bottom:1px solid var(--g200);padding:16px 32px;z-index:99;box-shadow:0 8px 20px rgba(0,0,0,.08)}
 .mobile-menu.open{display:block}
 .mobile-menu a{display:block;padding:14px 0;font-size:15px;font-weight:600;color:var(--g700);border-bottom:1px solid var(--g100);cursor:pointer}
@@ -484,6 +484,8 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <a href="/service/" onclick="goPage('service');return false" data-page="service">サービス</a>
 <a href="/representative/" onclick="goPage('rep');return false" data-page="rep">代表紹介</a>
 <a href="/company/" onclick="goPage('company');return false" data-page="company">会社概要</a>
+<a href="/column/">社長コラム</a>
+<a href="/faq/">FAQ</a>
 <a class="nav-cta" href="#contact" onclick="openModal();return false">無料相談</a>
 </div>
 <button class="nav-hamburger" onclick="toggleMobileMenu()" aria-label="メニューを開く" aria-expanded="false"><span></span><span></span><span></span></button>
@@ -493,6 +495,8 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <a href="/service/" onclick="goPage('service');closeMobileMenu();return false">サービス</a>
 <a href="/representative/" onclick="goPage('rep');closeMobileMenu();return false">代表紹介</a>
 <a href="/company/" onclick="goPage('company');closeMobileMenu();return false">会社概要</a>
+<a href="/column/">社長コラム</a>
+<a href="/faq/">FAQ</a>
 <a href="#contact" onclick="openModal();closeMobileMenu();return false">無料相談</a>
 </div>
 
@@ -501,14 +505,14 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <main>
 <section class="hero"><div class="hero-pattern"></div><div class="hero-glow"></div><div class="hero-inner">
 <h1>元大手M&A仲介副部長が<span>あなた専属の左腕に。</span></h1>
-<p class="hero-sub" style="margin-bottom:24px">M&A・事業承継の<strong style="color:#fff">セカンドオピニオン</strong>、<strong style="color:#fff">企業価値算定</strong>、<strong style="color:#fff">仲介手数料の検証</strong>まで。<br>売り手100%専属の経営顧問が、月20万で伴走します。</p>
+<p class="hero-sub" style="margin-bottom:24px">M&A・事業承継の<strong style="color:#fff">セカンドオピニオン</strong>、<strong style="color:#fff">企業価値算定</strong>、<strong style="color:#fff">条件交渉</strong>まで。<br>売り手100%専属の経営顧問が、月20万で伴走します。</p>
 <div style="display:flex;flex-wrap:wrap;gap:10px;margin-bottom:28px">
 <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:8px 14px"><span style="font-size:18px">&#9745;</span><span style="font-size:12px;color:rgba(255,255,255,.85)">M&Aセカンドオピニオン</span></div>
 <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:8px 14px"><span style="font-size:18px">&#9745;</span><span style="font-size:12px;color:rgba(255,255,255,.85)">企業価値算定・DD対策</span></div>
 <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:8px 14px"><span style="font-size:18px">&#9745;</span><span style="font-size:12px;color:rgba(255,255,255,.85)">事業承継の選択肢整理</span></div>
-<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:8px 14px"><span style="font-size:18px">&#9745;</span><span style="font-size:12px;color:rgba(255,255,255,.85)">交渉戦略・条件検証</span></div>
+<div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:4px;padding:8px 14px"><span style="font-size:18px">&#9745;</span><span style="font-size:12px;color:rgba(255,255,255,.85)">交渉戦略・条件交渉</span></div>
 </div>
-<div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,216,102,.15);border:1px solid rgba(255,216,102,.3);border-radius:20px;padding:6px 16px;margin-bottom:28px"><span style="font-size:11px;font-weight:800;color:#ffd866;letter-spacing:1px">月間5社限定</span><span style="font-size:11px;color:rgba(255,255,255,.5)">｜秘密厳守・相談だけOK</span></div>
+<div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,216,102,.15);border:1px solid rgba(255,216,102,.3);border-radius:20px;padding:6px 16px;margin-bottom:28px"><span style="font-size:11px;font-weight:800;color:#ffd866;letter-spacing:1px">月間5社限定</span><span style="font-size:11px;color:rgba(255,255,255,.5)">｜秘密厳守</span></div>
 <div class="hero-btns"><a class="btn-red" onclick="openModal()">30分無料相談を予約する</a><a class="hero-secondary" onclick="goPage('service')">サービス詳細を見る</a></div>
 <div class="cred-bar">
 <div class="cred-item"><p>元・大手M&A仲介</p><p>副部長</p></div>
@@ -703,7 +707,6 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <a id="noteMoreLink" class="note-more" style="display:none" target="_blank" rel="noopener noreferrer">もっと記事を読む（note） →</a>
 </div></section>
 
-<section class="cta-band"><div class="container reveal"><h2>売るかどうかは、話してから決めればいい。</h2><p>秘密厳守。30分の無料相談から。※ 月間5社限定</p><a class="btn-red" onclick="openModal()" href="#">30分の無料相談に申し込む →</a></div></section>
 </div>
 
 <!-- ═══ REPRESENTATIVE ═══ -->
@@ -737,7 +740,6 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <div class="tl-item"><div class="tl-year">—</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-content"><h4>大手M&A仲介会社 入社（全国担当）</h4><p>歴代新記録を樹立し新人賞を受賞。課長を経て副部長に昇進。複数業種での成約とチームマネジメントを担当。</p></div></div>
 <div class="tl-item"><div class="tl-year">—</div><div class="tl-line"><div class="tl-dot"></div></div><div class="tl-content"><h4>買い手企業の買収顧問及び「社長の左腕」サービスで独立</h4><p>戦略立案からM&A実務、PMI（統合支援）まで一貫して担当。仲介やコンサルの構造的課題を解決する新しいサービスモデルを構築。</p></div></div>
 </div></div></div></div></section>
-<section class="cta-band"><div class="container reveal"><h2>まずは30分、お話ししませんか。</h2><p>秘密厳守。相談だけでも構いません。</p><a class="btn-red" onclick="openModal()" href="#">30分の無料相談に申し込む →</a></div></section>
 </div>
 
 <!-- ═══ COMPANY ═══ -->
@@ -755,10 +757,10 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <tr><th>事業内容</th><td>M&Aアドバイザリー業務<br>事業承継に関するコンサルティング<br>企業価値評価・デューデリジェンス支援<br>買い手企業の買収顧問業務</td></tr>
 </table></div>
 </div></div></section>
-<section class="cta-band"><div class="container reveal"><h2>お気軽にお問い合わせください。</h2><p>秘密厳守。30分の無料相談から。</p><a class="btn-red" onclick="openModal()" href="#">30分の無料相談に申し込む →</a></div></section>
 </div>
 
-<!-- ═══ COLUMN ═══ -->
+<section class="cta-band"><div class="container reveal"><h2>お気軽にお問い合わせください。</h2><p>秘密厳守。30分の無料相談から。</p><a class="btn-red" onclick="openModal()" href="#">30分の無料相談に申し込む →</a></div></section>
+
 <!-- BACK TO TOP -->
 <button class="back-top" id="backTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑</button>
 
@@ -810,9 +812,6 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <p style="font-size:12px;color:var(--navy);font-weight:700;margin-bottom:2px">2営業日以内にご連絡いたします</p>
 <p style="font-size:11px;color:var(--g500)">髙田より直接メールまたはお電話でご連絡します</p>
 </div>
-<div style="display:flex;justify-content:center;gap:16px;margin-bottom:16px;flex-wrap:wrap">
-<span style="font-size:11px;color:var(--g500)">相談だけでもOK</span>
-</div>
 <button class="form-submit" onclick="submitForm()">送信する</button>
 <p class="form-note">※ 秘密厳守。いただいた情報は本サービスのご連絡以外に使用しません。</p>
 </div>
@@ -830,7 +829,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <footer>
 <div class="footer-inner">
 <div class="footer-logo"><div class="logo"><div class="logo-icon">左</div><div><div class="logo-text">社長の左腕</div></div></div><p>仲介でもコンサルでもない、経営者専属のM&Aパートナー。</p></div>
-<div class="footer-nav"><h4>Menu</h4><a href="/" onclick="goPage('top');return false">トップ</a><a href="/service/" onclick="goPage('service');return false">サービス紹介</a><a href="/representative/" onclick="goPage('rep');return false">代表紹介</a><a href="/company/" onclick="goPage('company');return false">会社概要</a></div>
+<div class="footer-nav"><h4>Menu</h4><a href="/" onclick="goPage('top');return false">トップ</a><a href="/service/" onclick="goPage('service');return false">サービス紹介</a><a href="/representative/" onclick="goPage('rep');return false">代表紹介</a><a href="/company/" onclick="goPage('company');return false">会社概要</a><a href="/column/">社長コラム</a><a href="/faq/">FAQ</a></div>
 <div class="footer-nav"><h4>Contact</h4><a href="mailto:k.takada@tkdconsul.com">k.takada@tkdconsul.com</a></div>
 </div>
 <div class="footer-bottom">© 2026 社長の左腕 All Rights Reserved.</div>
