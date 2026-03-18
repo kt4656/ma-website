@@ -486,6 +486,10 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 @media(max-width:768px){
   .share-bar{position:static;transform:none;flex-direction:row;justify-content:center;padding:24px 0;gap:12px}
 }
+.form-group.error input,.form-group.error textarea,.form-group.error select{border-color:#dc2626;background:rgba(220,38,38,.04)}
+.form-error{font-size:11px;color:#dc2626;margin-top:4px;display:none}
+.form-group.error .form-error{display:block}
+.form-checks.error{border:1px solid #dc2626;border-radius:6px;padding:8px}
 </style>
 <body>
 <!-- LOADING -->
@@ -740,6 +744,11 @@ function goPage(page){var urls={top:'/',service:'/service/',rep:'/representative
 function openModal(){document.getElementById('contactModal').classList.add('open');document.body.style.overflow='hidden';document.getElementById('formView').style.display='block';document.getElementById('formSent').style.display='none'}
 function closeModal(){document.getElementById('contactModal').classList.remove('open');document.body.style.overflow=''}
 function submitForm(){
+  // Clear previous errors
+  document.querySelectorAll('.form-group.error').forEach(g=>g.classList.remove('error'));
+  document.querySelectorAll('.form-error').forEach(e=>e.remove());
+  document.querySelector('.form-checks')?.classList.remove('error');
+
   const company=document.getElementById('f-company').value.trim();
   const name=document.getElementById('f-name').value.trim();
   const email=document.getElementById('f-email').value.trim();
@@ -748,8 +757,27 @@ function submitForm(){
   const date=document.getElementById('f-date').value;
   const time=document.getElementById('f-time').value;
   const checks=[...document.querySelectorAll('.form-checks input:checked')].map(c=>c.value);
-  if(!company||!name||!email){alert('会社名・お名前・メールアドレスをご入力ください。');return}
-  if(checks.length===0){alert('ご相談内容を1つ以上お選びください。');return}
+
+  var hasError=false;
+  function showError(id,msg){
+    var el=document.getElementById(id);
+    var group=el.closest('.form-group');
+    group.classList.add('error');
+    var err=document.createElement('div');
+    err.className='form-error';
+    err.textContent=msg;
+    group.appendChild(err);
+    if(!hasError){el.focus();hasError=true}
+  }
+
+  if(!company)showError('f-company','会社名を入力してください');
+  if(!name)showError('f-name','お名前を入力してください');
+  if(!email)showError('f-email','メールアドレスを入力してください');
+  else if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))showError('f-email','正しいメールアドレスを入力してください');
+  if(checks.length===0){document.querySelector('.form-checks').classList.add('error');if(!hasError){document.querySelector('.form-checks').scrollIntoView({behavior:'smooth',block:'center'});hasError=true}}
+
+  if(hasError)return;
+
   const btn=document.querySelector('.form-submit');
   btn.textContent='送信中...';btn.disabled=true;
   fetch('https://formspree.io/f/xzdjaggy',{
@@ -779,6 +807,8 @@ function submitForm(){
     btn.textContent='送信する';btn.disabled=false;
   });
 }
+document.querySelectorAll('#contactModal input,#contactModal textarea,#contactModal select').forEach(el=>{el.addEventListener('input',function(){var g=this.closest('.form-group');if(g)g.classList.remove('error');var e=g?.querySelector('.form-error');if(e)e.remove()})});
+document.querySelectorAll('.form-checks input').forEach(el=>{el.addEventListener('change',function(){document.querySelector('.form-checks')?.classList.remove('error')})});
 window.addEventListener('scroll',()=>{
   document.getElementById('nav').classList.toggle('scrolled',window.scrollY>20);
   document.getElementById('backTop').classList.toggle('show',window.scrollY>400);
@@ -829,6 +859,25 @@ window.addEventListener('load',()=>{const l=document.getElementById('pageLoader'
     .catch(function(){
       container.innerHTML='<div class="note-empty">記事の読み込みに失敗しました</div>';
     });
+})();
+// SNS Share
+(function(){
+  var url=encodeURIComponent(window.location.href);
+  var title=encodeURIComponent(document.title);
+  var x=document.getElementById('shareX');
+  if(x)x.href='https://twitter.com/intent/tweet?url='+url+'&text='+title;
+  var fb=document.getElementById('shareFB');
+  if(fb)fb.href='https://www.facebook.com/sharer/sharer.php?u='+url;
+  var line=document.getElementById('shareLINE');
+  if(line)line.href='https://social-plugins.line.me/lineit/share?url='+url;
+  var copy=document.getElementById('copyURL');
+  if(copy)copy.addEventListener('click',function(){
+    navigator.clipboard.writeText(window.location.href).then(function(){
+      var msg=document.getElementById('copyMsg');
+      msg.classList.add('show');
+      setTimeout(function(){msg.classList.remove('show')},2000);
+    });
+  });
 })();
 </script>
 </body>
