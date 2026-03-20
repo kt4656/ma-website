@@ -724,6 +724,7 @@ function submitForm(){
     method:'POST',
     headers:{'Content-Type':'application/json','Accept':'application/json'},
     body:JSON.stringify({
+      email:email,
       会社名:company,
       お名前:name,
       メールアドレス:email,
