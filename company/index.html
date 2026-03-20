@@ -699,25 +699,24 @@ function submitForm(){
 
   const btn=document.querySelector('.form-submit');
   btn.textContent='送信中...';btn.disabled=true;
+  var fd=new FormData();
+  fd.append('email',email);
+  fd.append('会社名',company);
+  fd.append('お名前',name);
+  fd.append('電話番号',tel||'未記入');
+  fd.append('ご相談内容',checks.join('、'));
+  fd.append('補足',message||'なし');
+  fd.append('ご連絡希望日',date||'指定なし');
+  fd.append('ご希望の時間帯',time||'指定なし');
+  fd.append('_subject','【社長の左腕】無料相談のお申し込み - '+company);
+  fd.append('_replyto',email);
+  fd.append('_autoresponse','この度は無料相談のお申し込みをいただき、誠にありがとうございます。タカダコンサルティング株式会社でございます。内容を確認のうえ、担当者より折り返しご連絡いたします。');
+  fd.append('_template','table');
+  fd.append('_captcha','false');
   fetch('https://formsubmit.co/ajax/k.takada@tkdconsul.com',{
     method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({
-      email:email,
-      会社名:company,
-      お名前:name,
-      メールアドレス:email,
-      電話番号:tel||'未記入',
-      ご相談内容:checks.join('、'),
-      補足:message||'なし',
-      ご連絡希望日:date||'指定なし',
-      ご希望の時間帯:time||'指定なし',
-      _subject:'【社長の左腕】無料相談のお申し込み - '+company,
-      _replyto:email,
-      _autoresponse:'この度は無料相談のお申し込みをいただき、誠にありがとうございます。タカダコンサルティング株式会社でございます。内容を確認のうえ、担当者より折り返しご連絡いたします。',
-      _template:'table',
-      _captcha:'false'
-    })
+    headers:{'Accept':'application/json'},
+    body:fd
   }).then(r=>{
     if(r.ok){
       document.getElementById('formView').style.display='none';
