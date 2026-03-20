@@ -163,6 +163,9 @@ img{max-width:100%;display:block}
 .hero h1{font-size:clamp(32px,5.5vw,60px);font-weight:900;color:#fff;line-height:1.35;margin-bottom:24px;max-width:780px;letter-spacing:0.02em}
 .hero h1 span{color:#ffd866;display:block;margin-top:4px}
 .hero-sub{font-size:clamp(15px,1.6vw,18px);color:rgba(255,255,255,.75);line-height:2;max-width:560px;margin-bottom:48px}
+.hero-merits{list-style:none;padding:0;margin:0 0 32px;display:flex;flex-direction:column;gap:12px;text-align:left}
+.hero-merits li{font-size:15px;color:rgba(255,255,255,.9);line-height:1.6;padding-left:28px;position:relative}
+.hero-merits li::before{content:'✓';position:absolute;left:0;color:#ffd866;font-weight:800;font-size:16px}
 .hero-btns{display:flex;gap:16px;flex-wrap:wrap}
 .hero .btn-red{padding:20px 48px;font-size:16px;box-shadow:0 4px 30px rgba(45,122,191,.35)}
 .hero-secondary{display:inline-flex;align-items:center;gap:8px;padding:20px 36px;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.8);font-weight:600;font-size:14px;letter-spacing:1px;border-radius:2px;transition:all .3s;cursor:pointer}
@@ -515,17 +518,24 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <section class="hero"><div class="hero-pattern"></div><div class="hero-glow"></div><div class="hero-inner">
 <h1>元大手M&A仲介副部長が<span>あなた専属の左腕に。</span></h1>
 <div style="display:inline-flex;align-items:center;gap:8px;background:rgba(255,216,102,.15);border:1px solid rgba(255,216,102,.3);border-radius:20px;padding:6px 16px;margin-bottom:28px"><span style="font-size:11px;font-weight:800;color:#ffd866;letter-spacing:1px">月間5社限定</span><span style="font-size:11px;color:rgba(255,255,255,.5)">｜秘密厳守</span></div>
+<ul class="hero-merits">
+<li>仲介の提案・条件を、売り手の立場でセカンドオピニオン</li>
+<li>企業価値算定で、適正な売却価格を把握</li>
+<li>買い手との条件交渉を、元大手仲介副部長が直接支援</li>
+<li>売るかどうか迷っている段階から相談OK</li>
+</ul>
 <div class="hero-btns"><a class="btn-red" onclick="openModal()">30分無料相談を予約する</a><a class="hero-secondary" onclick="goPage('service')">サービス詳細を見る</a></div>
-<div class="cred-bar">
-<div class="cred-item"><p>元・大手M&A仲介</p><p>副部長</p></div>
-<div class="cred-item"><p>案件関与実績</p><p>100件以上</p></div>
-<div class="cred-item"><p>キーエンス全国</p><p>上位入賞経験</p></div>
-<div class="cred-item"><p>現役の買い手側</p><p>買収顧問担当</p></div>
-</div></div></section>
+</div></section>
 
 <section class="hero-desc" style="background:linear-gradient(135deg,#0a1638,#152a6b);padding:48px 0;text-align:center">
 <div class="container">
 <p style="font-size:16px;line-height:2;color:rgba(255,255,255,.85);max-width:640px;margin:0 auto">M&A・事業承継のプロフェッショナルが、セカンドオピニオンや条件交渉まで。<br>売り手100％専属で最後まで伴走します。</p>
+<div class="cred-bar" style="margin-top:40px">
+<div class="cred-item"><p>元・大手M&A仲介</p><p>副部長</p></div>
+<div class="cred-item"><p>案件関与実績</p><p>100件以上</p></div>
+<div class="cred-item"><p>キーエンス全国</p><p>上位入賞経験</p></div>
+<div class="cred-item"><p>現役の買い手側</p><p>買収顧問担当</p></div>
+</div>
 </div>
 </section>
 
