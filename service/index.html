@@ -226,7 +226,7 @@ img{max-width:100%;display:block}
 .compare-table td:first-child{text-align:left;font-weight:700;color:var(--navy);font-size:12px}
 .compare-table td:last-child{color:var(--accent);font-weight:700;background:rgba(45,122,191,.04)}
 .compare-table tbody tr:hover{background:var(--g50)}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:48px;border:1px solid var(--g200);border-radius:4px;overflow:hidden}
+.pricing-grid{max-width:600px;margin:48px auto 0;border:1px solid var(--g200);border-radius:4px;overflow:hidden}
 .pricing-left{padding:56px 44px;background:var(--navy);color:#fff;text-align:center}
 .pricing-right{padding:56px 44px;background:var(--white)}
 .pricing-label{font-size:13px;color:rgba(255,255,255,.75);letter-spacing:2px;margin-bottom:16px}
@@ -369,7 +369,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
   .cred-item p:last-child{font-size:14px}
   .numbers-inner{grid-template-columns:1fr 1fr}
   .num-label{font-size:10px}
-  .about-grid,.pricing-grid,.rep-grid{grid-template-columns:1fr}
+  .about-grid,.rep-grid{grid-template-columns:1fr}
   .about-content h3{font-size:22px}
   .about-content p{font-size:14px}
   .section-title{font-size:clamp(22px,5vw,30px)}
@@ -557,7 +557,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <section class="section" style="background:var(--off)"><div class="container">
 <div class="reveal" style="text-align:center"><span class="section-tag">COMPARISON</span><h2 class="section-title">他社サービスとの比較</h2></div>
 
-<table class="matrix reveal">
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="matrix reveal">
 <thead><tr><th></th><th>M&A仲介<br>大手</th><th>経営<br>コンサル</th><th>社長の<br>左腕</th></tr></thead>
 <tbody>
 <tr><td>立場</td><td class="m-mid">△</td><td class="m-mid">△</td><td class="m-best">◎</td></tr>
@@ -569,7 +569,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <tr><td>担当者の質</td><td class="m-mid">△</td><td class="m-good">○</td><td class="m-best">◎</td></tr>
 <tr><td>気軽さ</td><td class="m-good">○</td><td class="m-mid">△</td><td class="m-best">◎</td></tr>
 </tbody>
-</table>
+</table></div>
 <p class="matrix-note reveal">◎ 最適 ／ ○ 良い ／ △ 一部課題あり ／ × 構造的に課題</p>
 
 <table class="compare-table reveal"><thead><tr><th></th><th>M&A仲介大手</th><th>経営コンサル</th><th style="background:var(--accent);color:#fff">社長の左腕</th></tr></thead>
