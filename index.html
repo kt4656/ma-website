@@ -801,7 +801,6 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <label class="form-check form-check-has"><input type="checkbox" value="事業承継・M&Aについて相談したい"><span class="ck"></span><span class="ck-label">事業承継・M&Aについて相談したい</span></label>
 <label class="form-check form-check-has"><input type="checkbox" value="仲介会社のセカンドオピニオンが欲しい"><span class="ck"></span><span class="ck-label">仲介会社のセカンドオピニオンが欲しい</span></label>
 <label class="form-check form-check-has"><input type="checkbox" value="企業価値・売却価格を知りたい"><span class="ck"></span><span class="ck-label">企業価値・売却価格を知りたい</span></label>
-<label class="form-check form-check-has"><input type="checkbox" value="M&A仲介の手数料が妥当か確認したい"><span class="ck"></span><span class="ck-label">M&A仲介の手数料が妥当か確認したい</span></label>
 <label class="form-check form-check-has"><input type="checkbox" value="後継者不在で今後の選択肢を整理したい"><span class="ck"></span><span class="ck-label">後継者不在で今後の選択肢を整理したい</span></label>
 <label class="form-check form-check-has"><input type="checkbox" value="その他"><span class="ck"></span><span class="ck-label">その他</span></label>
 </div>
@@ -932,7 +931,7 @@ function submitForm(){
       ご希望の時間帯:time||'指定なし',
       _subject:'【社長の左腕】無料相談のお申し込み - '+company,
       _replyto:email,
-      _autoresponse:'この度は「社長の左腕」へお問い合わせいただき、誠にありがとうございます。\n\nお問い合わせ内容を確認いたしました。\n担当者より1〜2営業日以内にご連絡させていただきます。\n\nしばらくお待ちくださいませ。\n\n━━━━━━━━━━━━━━━━━━\nタカダコンサルティング株式会社\n「社長の左腕」事業部\nメール: k.takada@tkdconsul.com\nHP: https://shacho-hidariude.com\n━━━━━━━━━━━━━━━━━━\n\n※このメールは自動送信です。',
+      _cc:email,
       _template:'table',
       _captcha:'false'
     })
