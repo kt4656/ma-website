@@ -51,10 +51,9 @@
   "mainEntity": [
     {"@type":"Question","name":"M&A仲介会社のセカンドオピニオンは受けられますか？","acceptedAnswer":{"@type":"Answer","text":"はい。仲介会社と並行してセカンドオピニオンとしてご利用いただけます。提案内容や条件の妥当性を、元・大手M&A仲介副部長の視点から客観的に検証します。"}},
     {"@type":"Question","name":"M&Aの相談はまだ売ると決めていなくてもできますか？","acceptedAnswer":{"@type":"Answer","text":"はい、できます。「そもそも売るかどうかを最後まで一緒に考える」ことが本サービスの根幹です。売却を前提としない顧問契約ですので、現状の整理や企業価値の把握だけでも十分にご活用いただけます。"}},
-    {"@type":"Question","name":"M&A仲介の手数料と比べて費用はどのくらいですか？","acceptedAnswer":{"@type":"Answer","text":"顧問料は半年120万円+税（月額換算20万円）です。M&A仲介もご依頼いただく場合、成功報酬から既払い顧問料が差し引かれるため、売却成立時は実質ご負担ゼロになります。M&A仲介大手の手数料（売却額の5〜10%）と比較して、構造的に売り手に有利なモデルです。"}},
+    {"@type":"Question","name":"M&A仲介の手数料と比べて費用はどのくらいですか？","acceptedAnswer":{"@type":"Answer","text":"顧問料は半年120万円+税（月額換算20万円）です。M&A仲介もご依頼いただく場合、成功報酬から既払い顧問料が差し引かれるため、売却成立時は実質ご負担ゼロになります。M&A仲介大手の手数料と比較して、構造的に売り手に有利なモデルです。"}},
     {"@type":"Question","name":"事業承継で後継者がいない場合はどうすればいいですか？","acceptedAnswer":{"@type":"Answer","text":"後継者不在は日本の中小企業の約60%が抱える課題です。M&Aによる第三者承継、社内承継、親族承継など、すべての選択肢を整理した上で最善策をご提案します。"}},
     {"@type":"Question","name":"M&A仲介会社との違いは何ですか？","acceptedAnswer":{"@type":"Answer","text":"仲介会社は売り手と買い手の双方から手数料を受け取る「両手取引」が一般的で、構造的に利益相反が存在します。当社は売り手であるあなたとだけ契約し、買い手からは一切報酬を受け取りません。"}},
-    {"@type":"Question","name":"企業価値の算定だけでも依頼できますか？","acceptedAnswer":{"@type":"Answer","text":"はい、顧問契約の中で企業価値の簡易算定を行います。売却の有無にかかわらず、自社の価値を正確に把握することは経営判断に活かせる資産です。"}},
     {"@type":"Question","name":"対応可能な企業規模・業種はありますか？","acceptedAnswer":{"@type":"Answer","text":"売上1億円〜50億円程度の中小企業が中心ですが、基本的に業種の制限はありません。製造業、建設業、サービス業、IT、介護など全ての業種に対応可能です。"}}
   ]
 }
@@ -226,7 +225,7 @@ img{max-width:100%;display:block}
 .compare-table td:first-child{text-align:left;font-weight:700;color:var(--navy);font-size:12px}
 .compare-table td:last-child{color:var(--accent);font-weight:700;background:rgba(45,122,191,.04)}
 .compare-table tbody tr:hover{background:var(--g50)}
-.pricing-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;margin-top:48px;border:1px solid var(--g200);border-radius:4px;overflow:hidden}
+.pricing-grid{max-width:600px;margin:48px auto 0;border:1px solid var(--g200);border-radius:4px;overflow:hidden}
 .pricing-left{padding:56px 44px;background:var(--navy);color:#fff;text-align:center}
 .pricing-right{padding:56px 44px;background:var(--white)}
 .pricing-label{font-size:13px;color:rgba(255,255,255,.75);letter-spacing:2px;margin-bottom:16px}
@@ -369,7 +368,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
   .cred-item p:last-child{font-size:14px}
   .numbers-inner{grid-template-columns:1fr 1fr}
   .num-label{font-size:10px}
-  .about-grid,.pricing-grid,.rep-grid{grid-template-columns:1fr}
+  .about-grid,.rep-grid{grid-template-columns:1fr}
   .about-content h3{font-size:22px}
   .about-content p{font-size:14px}
   .section-title{font-size:clamp(22px,5vw,30px)}
@@ -557,7 +556,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <section class="section" style="background:var(--off)"><div class="container">
 <div class="reveal" style="text-align:center"><span class="section-tag">COMPARISON</span><h2 class="section-title">他社サービスとの比較</h2></div>
 
-<table class="matrix reveal">
+<div style="overflow-x:auto;-webkit-overflow-scrolling:touch"><table class="matrix reveal">
 <thead><tr><th></th><th>M&A仲介<br>大手</th><th>経営<br>コンサル</th><th>社長の<br>左腕</th></tr></thead>
 <tbody>
 <tr><td>立場</td><td class="m-mid">△</td><td class="m-mid">△</td><td class="m-best">◎</td></tr>
@@ -569,7 +568,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <tr><td>担当者の質</td><td class="m-mid">△</td><td class="m-good">○</td><td class="m-best">◎</td></tr>
 <tr><td>気軽さ</td><td class="m-good">○</td><td class="m-mid">△</td><td class="m-best">◎</td></tr>
 </tbody>
-</table>
+</table></div>
 <p class="matrix-note reveal">◎ 最適 ／ ○ 良い ／ △ 一部課題あり ／ × 構造的に課題</p>
 
 <table class="compare-table reveal"><thead><tr><th></th><th>M&A仲介大手</th><th>経営コンサル</th><th style="background:var(--accent);color:#fff">社長の左腕</th></tr></thead>
@@ -595,7 +594,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <p class="pricing-sub">月額換算 20万円</p>
 <p class="pricing-sub2">※短期でのご相談も承っておりますが、スポットでの関与ですと交渉準備の時間含め貴社へのメリットが少ないためお断りさせていただく場合がございます。</p>
 <div class="pricing-divider"></div>
-<p class="pricing-label">M&A仲介もご依頼の場合</p>
+<p class="pricing-label">仮に仲介業もご依頼の場合</p>
 <div><span class="pricing-success">成功報酬は別途ご相談</span></div>
 <div class="pricing-note"><p>※ 既払い顧問料は成功報酬から差し引き</p><p>成約したら実質顧問料ゼロ</p></div>
 </div>
@@ -607,7 +606,7 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
 <div class="flow-step"><div class="flow-circle default">01</div><h4>無料相談</h4><p>30分・秘密厳守。まだ何も決まっていなくても問題なし</p><div class="flow-arrow">→</div></div>
 <div class="flow-step"><div class="flow-circle default">02</div><h4>顧問契約締結</h4><p>月20万円×半年一括。経営パートナーとして伴走開始</p><div class="flow-arrow">→</div></div>
 <div class="flow-step"><div class="flow-circle default">03</div><h4>方針決定</h4><p>売却 / 承継 / 現状維持。最善の選択肢を一緒に検討</p><div class="flow-arrow">→</div></div>
-<div class="flow-step"><div class="flow-circle accent">04</div><h4>売却成約の場合</h4><p>成功報酬（別途相談）。既払い顧問料を差し引き</p></div>
+<div class="flow-step"><div class="flow-circle accent">04</div><h4>売却成約の場合</h4><p>仮に仲介業もご依頼の場合、成功報酬（別途相談）。既払い顧問料を差し引き</p></div>
 </div></div></section>
 
 <section class="section" style="background:var(--white)"><div class="container">
@@ -781,25 +780,24 @@ function submitForm(){
 
   const btn=document.querySelector('.form-submit');
   btn.textContent='送信中...';btn.disabled=true;
+  var fd=new FormData();
+  fd.append('email',email);
+  fd.append('会社名',company);
+  fd.append('お名前',name);
+  fd.append('電話番号',tel||'未記入');
+  fd.append('ご相談内容',checks.join('、'));
+  fd.append('補足',message||'なし');
+  fd.append('ご連絡希望日',date||'指定なし');
+  fd.append('ご希望の時間帯',time||'指定なし');
+  fd.append('_subject','【社長の左腕】無料相談のお申し込み - '+company);
+  fd.append('_replyto',email);
+  fd.append('_autoresponse','この度は無料相談のお申し込みをいただき、誠にありがとうございます。タカダコンサルティング株式会社でございます。内容を確認のうえ、担当者より折り返しご連絡いたします。');
+  fd.append('_template','table');
+  fd.append('_captcha','false');
   fetch('https://formsubmit.co/ajax/k.takada@tkdconsul.com',{
     method:'POST',
-    headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({
-      email:email,
-      会社名:company,
-      お名前:name,
-      メールアドレス:email,
-      電話番号:tel||'未記入',
-      ご相談内容:checks.join('、'),
-      補足:message||'なし',
-      ご連絡希望日:date||'指定なし',
-      ご希望の時間帯:time||'指定なし',
-      _subject:'【社長の左腕】無料相談のお申し込み - '+company,
-      _replyto:email,
-      _autoresponse:'この度は無料相談のお申し込みをいただき、誠にありがとうございます。タカダコンサルティング株式会社でございます。内容を確認のうえ、担当者より折り返しご連絡いたします。',
-      _template:'table',
-      _captcha:'false'
-    })
+    headers:{'Accept':'application/json'},
+    body:fd
   }).then(r=>{
     if(r.ok){
       document.getElementById('formView').style.display='none';
