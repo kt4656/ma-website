@@ -196,7 +196,7 @@ img{max-width:100%;display:block}
 /* USE CASES */
 .usecase-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
 .usecase-card{padding:28px 28px 28px 64px;background:var(--white);border:1px solid var(--g200);border-radius:8px;box-shadow:0 4px 20px rgba(0,0,0,.08);transition:all .3s;position:relative}
-.usecase-card::before{content:'✓';position:absolute;left:24px;top:28px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:6px;display:flex;align-items:center;justify-content:center;font-size:16px;font-weight:800;line-height:28px;text-align:center}
+.usecase-card::before{content:'✓';position:absolute;left:24px;top:28px;width:28px;height:28px;background:var(--accent);color:#fff;border-radius:6px;font-size:16px;font-weight:800;line-height:28px;text-align:center;box-sizing:border-box}
 .usecase-card:hover{box-shadow:0 8px 30px rgba(0,0,0,.12);transform:translateY(-2px)}
 .usecase-card h4{font-size:16px;font-weight:800;color:var(--navy);margin-bottom:10px;line-height:1.5}
 .usecase-card p{font-size:13px;color:var(--g600);line-height:1.9}
@@ -375,7 +375,8 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
   .about-content h3{font-size:22px}
   .about-content p{font-size:14px}
   .section-title{font-size:clamp(22px,5vw,30px)}
-  .top-cards,.usecase-grid,.column-grid{grid-template-columns:1fr}
+  .top-cards,.column-grid{grid-template-columns:1fr}
+  .usecase-grid{grid-template-columns:repeat(2,1fr)}
   .consult-grid{grid-template-columns:1fr!important}
   .top-card h3{font-size:16px}
   .top-card p{font-size:13px}
@@ -447,6 +448,11 @@ footer{background:var(--navy-dk);padding:56px 32px 32px;color:rgba(255,255,255,.
   .about-grid{gap:32px}
   .cta-band h2{font-size:20px}
   .cta-band p{font-size:13px}
+  .usecase-grid{gap:16px}
+  .usecase-card{padding:20px 16px 20px 48px}
+  .usecase-card::before{left:14px;top:20px;width:24px;height:24px;font-size:14px;line-height:24px}
+  .usecase-card h4{font-size:13px}
+  .usecase-card p{font-size:11px}
   .risk-dark h3,.risk-light h3{font-size:16px}
   .risk-dark p,.risk-light p{font-size:12px}
   .faq-q h4{font-size:13px}
