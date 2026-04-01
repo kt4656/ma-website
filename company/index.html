@@ -709,10 +709,7 @@ function submitForm(){
   fd.append('ご希望の時間帯',time||'指定なし');
   fd.append('_subject','【社長の左腕】無料相談のお申し込み - '+company);
   fd.append('_replyto',email);
-  fd.append('_autoresponse','この度は無料相談のお申し込みをいただき、誠にありがとうございます。タカダコンサルティング株式会社でございます。内容を確認のうえ、担当者より折り返しご連絡いたします。');
-  fd.append('_template','table');
-  fd.append('_captcha','false');
-  fetch('https://formsubmit.co/ajax/k.takada@tkdconsul.com',{
+  fetch('https://formspree.io/f/xzdjaggy',{
     method:'POST',
     headers:{'Accept':'application/json'},
     body:fd
